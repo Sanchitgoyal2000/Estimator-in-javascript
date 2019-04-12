@@ -1,0 +1,123 @@
+<html>
+<head>
+<style>
+	.formstyle                         
+	{
+		width:170px;
+		height:310px;
+        margin:auto;
+        border:2px dashed black;
+        }
+	#b1
+	{
+		border-radius:40%;
+	}
+	#b2
+	{
+		border-radius:40%;
+	}
+	input                          
+	{
+		width:38px;
+		color:black;
+		border-width:0px;
+		font-size:15px;
+		background-color:white;
+	}
+	#answerstyle                       
+	{
+		width:170px;
+		height:30px;
+	}
+	#clear
+	{
+	 border-radius:40%;
+	  height:37px;
+	  background-color:Tomato;
+	}
+	#backspace
+	{
+	 border-radius:40%;
+	  height:37px;
+	  	  background-color:Orange;
+	}
+	#c1
+	{
+	 border-radius:40%;
+	  height:37px;
+	  	  background-color:DodgerBlue;
+	}
+	#c2
+	{
+	 border-radius:40%;
+	  height:37px;
+	  	  background-color:MediumSeaGreen;
+	}
+	#c3
+	{
+	 border-radius:40%;
+	  height:37px;
+	  	  background-color:Tomato;
+	}
+	#c4
+	{
+	 border-radius:40%;
+	  height:37px;
+	  	  background-color:SlateBlue;
+	}
+	#c5
+	{
+	 border-radius:40%;
+	  height:37px;
+	  	  background-color:Violet;
+	}
+	#c6
+	{
+	 border-radius:40%;
+	  height:37px;
+	  	  background-color:Orange;
+	}
+	#c7,#c8
+	{
+		width:59px;
+	}
+</style>
+<title>
+  Calculator 
+</title>
+</head>
+<body>
+<div class="formstyle">  <!-- division tag for boundary-->
+<form name="forms"> 		<!-- form is uded for input fields and buttons-->
+	<input type="text" name="answer" id="answerstyle"><br><br>
+	<input type="button" value="C" onclick="forms.answer.value='' " id="clear">
+    <!-- here '' null string is used to clear the output C means all clear-->
+    <input type="button" value="CE" onclick="forms.answer.value=forms.answer.value.substr(0,forms.answer.value.length-1)" id="backspace">
+    <input id="c1" type="button" value="%" onclick="forms.answer.value += '%' ">
+    <input id="c2" type="button" value="/" onclick="forms.answer.value += '/' ">
+    <br><br>
+    <input id="b1" type="button" value="7" onclick="forms.answer.value += '7' ">
+    <input id="b1" type="button" value="8" onclick="forms.answer.value += '8' ">
+    <input id="b1" type="button" value="9" onclick="forms.answer.value += '9' ">
+    <input id="c3" type="button" value="*" onclick="forms.answer.value += '*' ">
+    <br><br>
+    <input id="b1" type="button" value="4" onclick="forms.answer.value += '4' ">
+    <input id="b1" type="button" value="5" onclick="forms.answer.value += '5' ">
+    <input id="b1" type="button" value="6" onclick="forms.answer.value += '6' ">
+    <input id="c4" type="button" value="-" onclick="forms.answer.value += '-' ">
+    <br><br>
+    <input id="b1" type="button" value="1" onclick="forms.answer.value += '1' "><!-- here 1 is acting as a string and value will go to answerstyle input field-->
+    <input id="b1" type="button" value="3" onclick="forms.answer.value += '2' ">
+    <input id="b1" type="button" value="2" onclick="forms.answer.value += '3' ">
+    <input id="c5" type="button" value="+" onclick="forms.answer.value += '+' ">
+    <br><br>
+    <input id="c7" type="button" value="0" onclick="forms.answer.value += '0' ">
+    <input id="c8" type="button" value="." onclick="forms.answer.value += '.' ">
+    <input id="c6" type="button" value="=" onclick="forms.answer.value =eval(forms.answer.value) ">
+    <!-- eval is a javascript function takes parameter as a string and evaluates it .Also take Math.pow as a parameter-->
+    <!-- forms .answer.value contains the expression like 2+3*4 and eval will evaluate that expression-->
+    <br><br>
+</form>
+</div>
+</body>
+</html>
